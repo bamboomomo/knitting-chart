@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #F5F5F5;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-elevated: #FAFAFA;
+  --border-color: #E0E0E0;
+  --border-hover: #CCCCCC;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --accent: #F1C042;
+  --accent-dim: #c99a2e;
+  --accent-bg: rgba(241, 192, 66, 0.12);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #CCCCCC #EEEEEE;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(241, 192, 66, 0.15);
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 2px;
+  background: var(--bg-elevated);
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 4px;
+}
+
+::selection {
+  background: rgba(241, 192, 66, 0.3);
+  color: var(--text-primary);
+}
